@@ -3,5 +3,13 @@
 We have <%= @products.count %> products.
 
 <p>
+  <% @products.each do |products| %>
+    <li>
+      <%= products.name %>: <%= products.description %> -- $<%= products.price %>
+    </li>
+  <% end %>
+</p>
+
+<p>
 <%= link_to "Home", root_path%>
 </p>
