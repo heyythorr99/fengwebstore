@@ -7,9 +7,23 @@ class ProductsController < ApplicationController
         @cart = session[:cart]
   end
 
+  def buy
+    if session[:cart].nil?
+        session[:cart] = []
+    end
+    product = Product.find(params[:id])
+    session[:cart].append(product)
+    redirect_to :root
+  end
+
   def show
     @products = Product.find(params[:id])
     session[:cart].append(product)
     redirect_to :root
+  end
+
+  def checkout
+    @cart = session[:cart]
+    session[:cart] = []
   end
 end
