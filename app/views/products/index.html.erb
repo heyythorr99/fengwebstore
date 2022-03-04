@@ -4,11 +4,14 @@ We have <%= @products.count %> products.
 
 <p>
   <% @products.each do |products| %>
-    <li>
-      <%= products.name %>: <%= products.description %> -- $<%= products.price %>
+    <li><%= link_to products.name %>: $<%= products.price %>
+      <%= link_to "Buy Now", buy_path(product), class: "btn btn-primary"%>
     </li>
   <% end %>
 </p>
+
+<h2> your shopping cart has <%= @cart.length%>items</h2>
+<%= link_to "Check out", checkout_path%>
 
 <p>
 <%= link_to "Home", root_path%>
