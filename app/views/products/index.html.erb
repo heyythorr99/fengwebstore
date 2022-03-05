@@ -7,7 +7,7 @@ We have <%= @products.count %> products.
     <li><%=products.name%>: $<%= products.price %>
     <br>Product Details: <%=products.description%>
     </li>
-      <%= link_to "Buy Now", buy_path(products), class: "btn btn-primary"%>
+      <%= link_to "add to cart", buy_path(products), class: "btn btn-primary"%>
   <br>
   <% end %>
 </p>
@@ -16,5 +16,5 @@ We have <%= @products.count %> products.
 <%= link_to "Check out", checkout_path%>
 
 <p>
-<%= link_to "Home", root_path%>
+<button type="button" class="btn btn-secondary"><%= link_to "Home", root_path%></button>
 </p>
