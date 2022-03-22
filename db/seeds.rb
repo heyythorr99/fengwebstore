@@ -7,8 +7,21 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Product.create([
     {
+        name: "tupperware",
+        description: "a great way to store your food!",
+        price: 1.00,
+        quantity: 10
+    },
+    {
+        name: "mug",
+        description: "enjoy your coffee or tea with this mug",
+        price: 4.50,
+        quantity: 10
+    },
+    {
         name: "plushie",
         description: "a nice friend",
-        price: 5.00
+        price: 5.00,
+        quantity: 10
     }
 ])

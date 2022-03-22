@@ -5,7 +5,8 @@ We have <%= @products.count %> products.
 <p>
   <% @products.each do |products| %>
     <li><%=products.name%>: $<%= products.price %>
-    <br>Product Details: <%=products.description%>
+    <br>Product Description: <%=products.description%>
+    <br>Quantity: <%=products.quantity%> left
     </li>
       <%= link_to "add to cart", buy_path(products), class: "btn btn-primary"%>
   <br>
