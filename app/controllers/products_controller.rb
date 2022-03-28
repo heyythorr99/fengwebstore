@@ -26,4 +26,9 @@ class ProductsController < ApplicationController
     @cart = session[:cart]
     session[:cart] = []
   end
+
+  def list
+    @products = Product.all
+    rend json: @products
+  end
 end
