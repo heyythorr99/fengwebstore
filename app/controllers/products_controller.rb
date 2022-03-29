@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
   def index
+    
+        @products = Product.all
+        @cart = session[:cart]
+        ##@item_count = session[:cart].values.reduce(:+)
     if session[:cart].nil?
       session[:cart] = []
     end
-        @products = Product.all
-        @cart = session[:cart]
   end
 
   def buy
@@ -28,7 +30,8 @@ class ProductsController < ApplicationController
   end
 
   def list
+    # return products as json list
     @products = Product.all
-    rend json: @products
+    render json: @products, only: [:id, :name, :description]
   end
 end

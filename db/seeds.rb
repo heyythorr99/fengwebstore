@@ -11,6 +11,7 @@ Product.create([
         description: "a great way to store your food!",
         price: 1.00,
         quantity: 10
+        image: "tupperware.jpg"
     },
     {
         name: "mug",
