@@ -10,19 +10,21 @@ Product.create([
         name: "tupperware",
         description: "a great way to store your food!",
         price: 1.00,
-        quantity: 10
+        quantity: 10,
         image: "tupperware.jpg"
     },
     {
         name: "mug",
         description: "enjoy your coffee or tea with this mug",
         price: 4.50,
-        quantity: 10
+        quantity: 10,
+        image: "bear_mug.jpg"
     },
     {
         name: "plushie",
         description: "a nice friend",
         price: 5.00,
-        quantity: 10
+        quantity: 10,
+        image: ""
     }
 ])
