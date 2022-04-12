@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Product.destroy_all
 Product.create([
     {
         name: "tupperware",
@@ -25,6 +27,6 @@ Product.create([
         description: "a nice friend",
         price: 5.00,
         quantity: 10,
-        image: ""
+        image: "plushie.jpg"
     }
 ])

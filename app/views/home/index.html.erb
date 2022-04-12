@@ -1,9 +1,7 @@
 <h1>Welcome to my Webstore</h1>
 
-<img src="tupperware.jpg">
-
 We have <%= @products.count %> products and counting
 
 <p>
-<button type="button" class="btn btn-link"><%= link_to "Click here to see all our products!", products_path %></button>
+<%= link_to "Click here to see all our products!", products_path, class: "btn btn-primary" %></button>
 </p>

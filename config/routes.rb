@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get "/products/:id/buy", to: "products#buy", as: "buy"
   get "/checkout", to: "home#checkout", as: "checkout"
   get "products.json", to: "products#list"
-  resources :products
+  get "/products", to: "products#index"
 end
