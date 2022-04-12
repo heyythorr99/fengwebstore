@@ -7,7 +7,7 @@ We have <%= @products.count %> products.
     <li><%=products.name%>: $<%= products.price %>
     <br>Product Description: <%=products.description%>
     <br>Quantity: <%=products.quantity%> left
-    <br><%=image_tag products.image %>
+    <br><%=image_tag products.image, width: "100px"%>
     </li>
       <%= link_to "add to cart", buy_path(products), class: "btn btn-primary"%>
   <br>
